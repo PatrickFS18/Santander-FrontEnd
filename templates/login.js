@@ -49,6 +49,10 @@ export default Login = () => {
                         ><View style={styles.circle}></View></TouchableOpacity>
                     </View>
                 </View>
+
+                <TouchableOpacity style={styles.login}>
+                    <Text style={styles.buttonText}>Entrar</Text>
+                </TouchableOpacity>
             </View>
         </View>
 
@@ -61,8 +65,22 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
 
     },
+    login: {
+        backgroundColor: '#c00',
+        width: '90%',
+        paddingVertical: 12,
+        borderRadius: 10,
+        left:20,
+        top:600,
+        alignItems: 'center',
+    },
+    buttonText: {
+        color: 'white',
+        fontSize:15
+    },
+
     remember: {
-        flexDirection:'row',
+        flexDirection: 'row',
     },
     circle: {
         width: 30,
@@ -78,7 +96,7 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         borderRadius: 20,
         top: 65,
-        right:-215,
+        right: -215,
         width: 50,
         height: 35
     }, checked: {
