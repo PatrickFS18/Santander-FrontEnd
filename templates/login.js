@@ -17,7 +17,7 @@ export default Login = () => {
         <View style={styles.container}>
             <View style={styles.header}>
                 <View style={styles.menuContainer}>
-                    <Image source={require('../assets/icons/menu.png')} style={{ width: 22, height: 25, tintColor: 'white' }} />
+                    <Image source={require('../assets/icons/arrow.png')} style={{ width: 25, height: 25, tintColor: 'white' }} />
                 </View>
                 <Image source={require('../assets/santander-logo.png')} style={{ width: 25, height: 25, marginRight: 5, marginTop: 30 }} />
                 <Text style={styles.text}>Santander</Text>
