@@ -1,10 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { View, Text, Image, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import SplashScreen from './templates/splashScreen';
-import Login from './templates/login';
+import SplashScreen from './templates/screen/splashScreen/index';
+import Login from './templates/screen/login/index';
 
 const Stack = createStackNavigator();
 
