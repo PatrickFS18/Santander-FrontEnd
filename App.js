@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import SplashScreen from './templates/screen/splashScreen/index';
 import Login from './templates/screen/login/index';
+import Home from './templates/screen/home/index';
 
 const Stack = createStackNavigator();
 
@@ -24,6 +25,13 @@ export default function App() {
           options={{
             headerShown: false, // Esconder o cabeçalho
 
+          }}
+        />
+         <Stack.Screen
+          name="home"
+          component={Home}
+          options={{
+            headerShown: false, // Esconder o cabeçalho
           }}
         />
       </Stack.Navigator>

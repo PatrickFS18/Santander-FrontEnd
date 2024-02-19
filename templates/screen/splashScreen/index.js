@@ -16,7 +16,7 @@ export default SplashScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Image source={require('../../../assets/santander-logo.png')} style={{ width: 40, height: 40, marginRight: 5 }} />
+      <Image source={require('../../../assets/santander-logo.png')} style={{  width: 25, height: 25, marginRight: 5 }} />
       <Text style={styles.text}>Santander</Text>
     </View>
   );
