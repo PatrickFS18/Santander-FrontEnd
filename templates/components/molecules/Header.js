@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 import styles from '../../screen/login/styles';
-
+ 
 const Header = () => {
   return (
     <View style={styles.header}>
