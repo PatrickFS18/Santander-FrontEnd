@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
     menuContainer: {
         position: 'absolute',
         left: 20,
-        top: 50, // Ajuste conforme necessário para alinhar verticalmente com o texto
+        top: 43, // Ajuste conforme necessário para alinhar verticalmente com o texto
     },
 });
 
