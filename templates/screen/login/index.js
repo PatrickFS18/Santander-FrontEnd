@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, Image, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
 import styles from './styles';
-import GroupInput from '../../components/molecules/groupInput';
+import GroupInput from '../../components/molecules/GroupInput';
 import Header from '../../components/molecules/Header';
 import { useNavigation } from '@react-navigation/native';
 
