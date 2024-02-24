@@ -61,8 +61,9 @@ const Home = () => {
 
                 Saldo disponível
             </Text>
-            <Image  source={require('../../../assets/icons/seta.png')} style={{ width: 25, height: 20, tintColor: 'black', zIndex: 1, position: 'absolute', top: 210, left: '85%',    transform: [{ rotate: isExpanded ? '180deg' : '0deg' }], }} />
-
+            <Text style={{position: 'absolute',  top: isExpanded ? 210 : 205  , left: '85%', zIndex: 1,    transform: [{ rotate: isExpanded ? '180deg' : '0deg' }]}} onPress={toggleExpansion}>
+                        <Image  source={require('../../../assets/icons/seta.png')} style={{ width: 25, height: 20, tintColor: 'black'}} />
+                        </Text>
             <TouchableOpacity
                 activeOpacity={1}
                 onPress={toggleExpansion} style={backgroundColor = 'white'}>
