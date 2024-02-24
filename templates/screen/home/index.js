@@ -56,10 +56,13 @@ const Home = () => {
             </View>
             <Image source={require('../../../assets/icons/dolarIcone.png')} style={{ width: 40, height: 40, tintColor: 'red', zIndex: 1, position: 'absolute', top: 202, left: 30 }} />
 
+            
             <Text style={styles.text} onPress={toggleExpansion}>
 
                 Saldo disponível
             </Text>
+            <Image  source={require('../../../assets/icons/seta.png')} style={{ width: 25, height: 20, tintColor: 'black', zIndex: 1, position: 'absolute', top: 210, left: '85%',    transform: [{ rotate: isExpanded ? '180deg' : '0deg' }], }} />
+
             <TouchableOpacity
                 activeOpacity={1}
                 onPress={toggleExpansion} style={backgroundColor = 'white'}>

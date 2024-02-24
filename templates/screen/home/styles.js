@@ -15,6 +15,15 @@ const styles = StyleSheet.create({
         top:'75%',
         alignItems: 'center',
     },
+    setaImage: {
+        width: 25,
+        height: 20,
+        tintColor: 'black',
+        zIndex: 1,
+        position: 'absolute',
+        top: 210,
+        left: '85%',
+    },
     buttonText: {
         color: 'white',
         fontSize:15
