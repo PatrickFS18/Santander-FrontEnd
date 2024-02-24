@@ -1,20 +1,34 @@
 import React, { useState } from 'react';
 import { View, Text, Image, TextInput, StyleSheet, TouchableOpacity, Animated } from 'react-native';
 import styles from './styles';
+import TwoButtonView from '../../components/molecules/twoButton';
 
 const Home = () => {
 
 
-
+    const [isReady, setIsReady] = useState(false);
+    const ready = () => {
+        if(isReady==false){
+        setTimeout(() => {
+          setIsReady(!isReady);
+        }, 260);
+    }else{
+        setTimeout(() => {
+            setIsReady(!isReady);
+          }, 10);
+    }
+      };
     const [isExpanded, setIsExpanded] = useState(false);
     const [animation] = useState(new Animated.Value(0));
     const toggleExpansion = () => {
+        ready();
         setIsExpanded(!isExpanded);
         Animated.timing(animation, {
             toValue: isExpanded ? 0 : 1,
-            duration: 500, // Duração da animação em milissegundos
+            duration: 300, // Duração da animação em milissegundos
             useNativeDriver: false, // Importante definir como false para usar estilos não suportados nativamente
         }).start();
+        
     };
 
     const animatedStyle = {
@@ -24,7 +38,7 @@ const Home = () => {
         }),
 
     };
-
+    
 
 
     return (
@@ -38,14 +52,20 @@ const Home = () => {
                     <Image source={require('../../../assets/icons/gps.png')} style={{ width: 26, height: 26, tintColor: 'white' }} />
                 </View>
             </View>
+            <Image source={require('../../../assets/icons/dolarIcone.png')} style={{ width: 40, height: 40, tintColor: 'red', zIndex:1,position:'absolute',top:202,left:30 }} />
+
             <Text style={styles.text} onPress={toggleExpansion}>
+
                         Saldo disponível
                     </Text>
             <TouchableOpacity
             activeOpacity={1}
                 onPress={toggleExpansion} style={backgroundColor='white'}>
-                <Animated.View style={[styles.saldo, animatedStyle]} >
 
+                <Animated.View style={[styles.saldo, animatedStyle]} >
+               {isReady &&
+<TwoButtonView/>
+}
                     
 
                 </Animated.View>

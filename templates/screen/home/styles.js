@@ -71,10 +71,10 @@ const styles = StyleSheet.create({
     },
     text: {
         color: 'black',
-        fontSize: 20,
+        fontSize: 18,
         fontWeight: '400',
         top: -12,
-        left:65,
+        left:75,
         zIndex:1
     },
     header: {
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        height: 230,
+        height: 220,
         width: '100%' // Defina a altura do cabeçalho conforme necessário
     },
     headerText: {
@@ -107,12 +107,12 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         borderRadius: 5,
         width: '90%',
-        height: 60,
+        height: 65,
         elevation: 2,
         position: 'absolute',
         marginStart: 20,
         marginEnd: 5,
-        top: -55,
+        top: -60,
         justifyContent: 'center',
       },
     saldoText:{
