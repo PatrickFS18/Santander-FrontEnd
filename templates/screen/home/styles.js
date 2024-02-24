@@ -70,10 +70,12 @@ const styles = StyleSheet.create({
 
     },
     text: {
-        color: 'white',
+        color: 'black',
         fontSize: 20,
-        fontWeight: '700',
-        marginTop: 30
+        fontWeight: '400',
+        top: -12,
+        left:65,
+        zIndex:1
     },
     header: {
         backgroundColor: '#c00',
@@ -101,22 +103,24 @@ const styles = StyleSheet.create({
         left: 20,
         top: 43, // Ajuste conforme necessário para alinhar verticalmente com o texto
     },
-    saldo:{
-        backgroundColor:'white',
-        borderRadius:5,
-        width:'90%',
-        height:60,
-        position:'absolute',
-        marginStart:20,
-        marginEnd:5,
-        top:200,
-        justifyContent:'center',
-    },
+    saldo: {
+        backgroundColor: 'white',
+        borderRadius: 5,
+        width: '90%',
+        height: 60,
+        elevation: 2,
+        position: 'absolute',
+        marginStart: 20,
+        marginEnd: 5,
+        top: -55,
+        justifyContent: 'center',
+      },
     saldoText:{
         color:'black',
         left:40,
         fontSize:19
     },
+    
 });
 
 export default styles;
