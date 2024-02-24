@@ -94,14 +94,16 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     gpsContainer: {
+        flex:1,
+        flexDirection:'row',
         position: 'absolute',
         right: 20,
-        top: 50, // Ajuste conforme necessário para alinhar verticalmente com o texto
+        top: 45, // Ajuste conforme necessário para alinhar verticalmente com o texto
     },
     menuContainer: {
         position: 'absolute',
         left: 20,
-        top: 43, // Ajuste conforme necessário para alinhar verticalmente com o texto
+        top: 45, // Ajuste conforme necessário para alinhar verticalmente com o texto
     },
     saldo: {
         backgroundColor: 'white',
@@ -120,6 +122,24 @@ const styles = StyleSheet.create({
         left:40,
         fontSize:19
     },
+    saldoNumber:{
+        fontWeight:'bold',
+        fontSize:25,
+        left:18,
+        top:10
+    },
+    limitNumber:{
+        left:18,
+        top:10
+    },
+    limitStyle:{
+        textDecorationLine: 'underline', // Adiciona sublinhado ao texto
+        color:'#FF3333',
+        
+        fontSize:16,
+        left:18,
+        top:10
+    }
     
 });
 

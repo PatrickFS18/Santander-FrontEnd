@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row', // Alinhamento horizontal
     justifyContent: 'spaspace-between', // Espaçamento entre os botões
     paddingHorizontal: 18, // Espaçamento horizontal para a View
-    top:90,
+    top:50,
   },
   margin:{
     marginLeft:-8,

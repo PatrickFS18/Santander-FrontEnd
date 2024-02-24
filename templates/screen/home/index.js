@@ -8,16 +8,16 @@ const Home = () => {
 
     const [isReady, setIsReady] = useState(false);
     const ready = () => {
-        if(isReady==false){
-        setTimeout(() => {
-          setIsReady(!isReady);
-        }, 260);
-    }else{
-        setTimeout(() => {
-            setIsReady(!isReady);
-          }, 10);
-    }
-      };
+        if (isReady == false) {
+            setTimeout(() => {
+                setIsReady(!isReady);
+            }, 10);
+        } else {
+            setTimeout(() => {
+                setIsReady(!isReady);
+            }, 10);
+        }
+    };
     const [isExpanded, setIsExpanded] = useState(false);
     const [animation] = useState(new Animated.Value(0));
     const toggleExpansion = () => {
@@ -28,7 +28,7 @@ const Home = () => {
             duration: 300, // Duração da animação em milissegundos
             useNativeDriver: false, // Importante definir como false para usar estilos não suportados nativamente
         }).start();
-        
+
     };
 
     const animatedStyle = {
@@ -38,35 +38,43 @@ const Home = () => {
         }),
 
     };
-    
+
 
 
     return (
         <View style={styles.container}>
             <View style={styles.header}>
                 <View style={styles.menuContainer}>
-                    <Image source={require('../../../assets/icons/menu.png')} style={{ width: 35, height: 35, tintColor: 'white' }} />
+                    <Image source={require('../../../assets/icons/menu.png')} style={{ width: 28, height: 28, tintColor: 'white' }} />
                 </View>
-                <Image source={require('../../../assets/slogo.png')} style={{ width: 150, height: 26.2, marginRight: 5, marginBottom: 110, tintColor: 'white' }} />
+                <Image source={require('../../../assets/slogo.png')} style={{ width: 135, height: 23.5, marginRight: 75, marginBottom: 105, tintColor: 'white' }} />
                 <View style={styles.gpsContainer}>
-                    <Image source={require('../../../assets/icons/gps.png')} style={{ width: 26, height: 26, tintColor: 'white' }} />
+                <Image source={require('../../../assets/icons/help.png')} style={{ width: 30, height: 30,tintColor:'white',top:-4,right:20}} />
+
+                    <Image source={require('../../../assets/icons/notificacao.png')} style={{ width: 20, height: 20}} />
                 </View>
             </View>
-            <Image source={require('../../../assets/icons/dolarIcone.png')} style={{ width: 40, height: 40, tintColor: 'red', zIndex:1,position:'absolute',top:202,left:30 }} />
+            <Image source={require('../../../assets/icons/dolarIcone.png')} style={{ width: 40, height: 40, tintColor: 'red', zIndex: 1, position: 'absolute', top: 202, left: 30 }} />
 
             <Text style={styles.text} onPress={toggleExpansion}>
 
-                        Saldo disponível
-                    </Text>
+                Saldo disponível
+            </Text>
             <TouchableOpacity
-            activeOpacity={1}
-                onPress={toggleExpansion} style={backgroundColor='white'}>
+                activeOpacity={1}
+                onPress={toggleExpansion} style={backgroundColor = 'white'}>
 
                 <Animated.View style={[styles.saldo, animatedStyle]} >
-               {isReady &&
-<TwoButtonView/>
-}
-                    
+                    {isReady &&
+                        <>
+                            <Text style={styles.saldoNumber}>R$ 179.980,25</Text>
+                            <Text style={styles.limitNumber}>Saldo + Limite: R$ 479.980,25</Text>
+                            <Text style={styles.limitStyle}>Entenda seu limite</Text>
+
+                            <TwoButtonView />
+                        </>
+                    }
+
 
                 </Animated.View>
             </TouchableOpacity>
