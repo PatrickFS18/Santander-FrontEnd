@@ -49,21 +49,24 @@ const Home = () => {
                 </View>
                 <Image source={require('../../../assets/slogo.png')} style={{ width: 135, height: 23.5, marginRight: 75, marginBottom: 105, tintColor: 'white' }} />
                 <View style={styles.gpsContainer}>
-                <Image source={require('../../../assets/icons/help.png')} style={{ width: 30, height: 30,tintColor:'white',top:-4,right:20}} />
+                    <Image source={require('../../../assets/icons/help.png')} style={{ width: 30, height: 30, tintColor: 'white', top: -4, right: 20 }} />
 
-                    <Image source={require('../../../assets/icons/notificacao.png')} style={{ width: 20, height: 20}} />
+                    <Image source={require('../../../assets/icons/notificacao.png')} style={{ width: 20, height: 20 }} />
                 </View>
             </View>
             <Image source={require('../../../assets/icons/dolarIcone.png')} style={{ width: 40, height: 40, tintColor: 'red', zIndex: 1, position: 'absolute', top: 202, left: 30 }} />
 
-            
+            <View style={styles.account}>
+                <Text style={styles.accountText}>Olá, Érick</Text>
+                <Text style={[styles.accountText,styles.accountNumber]}>Ag 1151 Cc 01053492-3</Text>
+            </View>
             <Text style={styles.text} onPress={toggleExpansion}>
 
                 Saldo disponível
             </Text>
-            <Text style={{position: 'absolute',  top: isExpanded ? 210 : 205  , left: '85%', zIndex: 1,    transform: [{ rotate: isExpanded ? '180deg' : '0deg' }]}} onPress={toggleExpansion}>
-                        <Image  source={require('../../../assets/icons/seta.png')} style={{ width: 25, height: 20, tintColor: 'black'}} />
-                        </Text>
+            <Text style={{ position: 'absolute', top: isExpanded ? 210 : 205, left: '85%', zIndex: 1, transform: [{ rotate: isExpanded ? '180deg' : '0deg' }] }} onPress={toggleExpansion}>
+                <Image source={require('../../../assets/icons/seta.png')} style={{ width: 25, height: 20, tintColor: 'black' }} />
+            </Text>
             <TouchableOpacity
                 activeOpacity={1}
                 onPress={toggleExpansion} style={backgroundColor = 'white'}>
@@ -71,8 +74,8 @@ const Home = () => {
                 <Animated.View style={[styles.saldo, animatedStyle]} >
                     {isReady &&
                         <>
-                            <Text style={styles.saldoNumber}>R$ 179.980,25</Text>
-                            <Text style={styles.limitNumber}>Saldo + Limite: R$ 479.980,25</Text>
+                            <Text style={styles.saldoNumber}>R$ 6.245,25</Text>
+                            <Text style={styles.limitNumber}>Saldo + Limite: R$ 6.345,25</Text>
                             <Text style={styles.limitStyle}>Entenda seu limite</Text>
 
                             <TwoButtonView />

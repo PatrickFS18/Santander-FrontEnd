@@ -11,8 +11,8 @@ const styles = StyleSheet.create({
         width: '90%',
         paddingVertical: 12,
         borderRadius: 10,
-        left:20,
-        top:'75%',
+        left: 20,
+        top: '75%',
         alignItems: 'center',
     },
     setaImage: {
@@ -23,10 +23,21 @@ const styles = StyleSheet.create({
         position: 'absolute',
         top: 210,
         left: '85%',
+    }, account: {
+        position: 'absolute',
+    },
+    accountText: {
+        color:'white',
+        top:110,
+        left:20,
+        fontSize:17,
+    },
+    accountNumber:{
+        fontWeight:'700'
     },
     buttonText: {
         color: 'white',
-        fontSize:15
+        fontSize: 15
     },
 
     remember: {
@@ -83,8 +94,8 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: '400',
         top: -12,
-        left:75,
-        zIndex:1
+        left: 75,
+        zIndex: 1
     },
     header: {
         backgroundColor: '#c00',
@@ -103,8 +114,8 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     gpsContainer: {
-        flex:1,
-        flexDirection:'row',
+        flex: 1,
+        flexDirection: 'row',
         position: 'absolute',
         right: 20,
         top: 45, // Ajuste conforme necessário para alinhar verticalmente com o texto
@@ -125,31 +136,31 @@ const styles = StyleSheet.create({
         marginEnd: 5,
         top: -60,
         justifyContent: 'center',
-      },
-    saldoText:{
-        color:'black',
-        left:40,
-        fontSize:19
     },
-    saldoNumber:{
-        fontWeight:'bold',
-        fontSize:25,
-        left:18,
-        top:10
+    saldoText: {
+        color: 'black',
+        left: 40,
+        fontSize: 19
     },
-    limitNumber:{
-        left:18,
-        top:10
+    saldoNumber: {
+        fontWeight: 'bold',
+        fontSize: 25,
+        left: 18,
+        top: 10
     },
-    limitStyle:{
+    limitNumber: {
+        left: 18,
+        top: 10
+    },
+    limitStyle: {
         textDecorationLine: 'underline', // Adiciona sublinhado ao texto
-        color:'#FF3333',
-        
-        fontSize:16,
-        left:18,
-        top:10
+        color: '#FF3333',
+
+        fontSize: 16,
+        left: 18,
+        top: 10
     }
-    
+
 });
 
 export default styles;
