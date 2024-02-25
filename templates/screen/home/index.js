@@ -57,8 +57,8 @@ const Home = () => {
             <Image source={require('../../../assets/icons/dolarIcone.png')} style={{ width: 40, height: 40, tintColor: 'red', zIndex: 1, position: 'absolute', top: 202, left: 30 }} />
 
             <View style={styles.account}>
-                <Text style={styles.accountText}>Olá, Érick</Text>
-                <Text style={[styles.accountText,styles.accountNumber]}>Ag 1151 Cc 01053492-3</Text>
+                <Text style={styles.accountText}>Olá, Patrick</Text>
+                <Text style={[styles.accountText,styles.accountNumber]}>Ag 1151 Cc 01068492-3</Text>
             </View>
             <Text style={styles.text} onPress={toggleExpansion}>
 
@@ -74,8 +74,8 @@ const Home = () => {
                 <Animated.View style={[styles.saldo, animatedStyle]} >
                     {isReady &&
                         <>
-                            <Text style={styles.saldoNumber}>R$ 6.245,25</Text>
-                            <Text style={styles.limitNumber}>Saldo + Limite: R$ 6.345,25</Text>
+                            <Text style={styles.saldoNumber}>R$ 1.003.245,23</Text>
+                            <Text style={styles.limitNumber}>Saldo + Limite: R$ 1.004.345,23</Text>
                             <Text style={styles.limitStyle}>Entenda seu limite</Text>
 
                             <TwoButtonView />
