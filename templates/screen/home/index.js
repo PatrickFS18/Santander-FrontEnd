@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, Image, TextInput, StyleSheet, TouchableOpacity, Animated } from 'react-native';
 import styles from './styles';
 import TwoButtonView from '../../components/molecules/twoButton';
+import Menu from '../../components/organism/menuHome';
 
 const Home = () => {
 
@@ -39,13 +40,28 @@ const Home = () => {
 
     };
 
-
-
+    const [showMenu, setShowMenu] = useState(false);
+    function handleShowMenu() {
+        setShowMenu(!showMenu);
+    }
     return (
         <View style={styles.container}>
+
             <View style={styles.header}>
                 <View style={styles.menuContainer}>
-                    <Image source={require('../../../assets/icons/menu.png')} style={{ width: 28, height: 28, tintColor: 'white' }} />
+                        {showMenu ? (
+                            <TouchableOpacity onPress={handleShowMenu} style={{ zIndex: 3 }}>
+                                <Image source={require('../../../assets/icons/menu.png')} style={{ width: 28, height: 28, tintColor: 'white' }} />
+                            </TouchableOpacity>
+
+                        ) : (
+                            <>
+                            <TouchableOpacity onPress={handleShowMenu} style={{ zIndex: 3 }}>
+                                <Image source={require('../../../assets/icons/seta.png')} style={{ width: 28, height: 28, tintColor: 'white' }} />
+                            </TouchableOpacity>
+                            <Menu/>
+                            </>
+                        )}
                 </View>
                 <Image source={require('../../../assets/slogo.png')} style={{ width: 135, height: 23.5, marginRight: 75, marginBottom: 105, tintColor: 'white' }} />
                 <View style={styles.gpsContainer}>
@@ -58,7 +74,7 @@ const Home = () => {
 
             <View style={styles.account}>
                 <Text style={styles.accountText}>Olá, Patrick</Text>
-                <Text style={[styles.accountText,styles.accountNumber]}>Ag 1151 Cc 01068492-3</Text>
+                <Text style={[styles.accountText, styles.accountNumber]}>Ag 1151 Cc 01068492-3</Text>
             </View>
             <Text style={styles.text} onPress={toggleExpansion}>
 
@@ -74,8 +90,8 @@ const Home = () => {
                 <Animated.View style={[styles.saldo, animatedStyle]} >
                     {isReady &&
                         <>
-                            <Text style={styles.saldoNumber}>R$ 1.003.245,23</Text>
-                            <Text style={styles.limitNumber}>Saldo + Limite: R$ 1.004.345,23</Text>
+                            <Text style={styles.saldoNumber}>R$ 1.000.000,00</Text>
+                            <Text style={styles.limitNumber}>Saldo + Limite: R$ 1.000.900,00</Text>
                             <Text style={styles.limitStyle}>Entenda seu limite</Text>
 
                             <TwoButtonView />

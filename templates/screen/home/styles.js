@@ -26,14 +26,20 @@ const styles = StyleSheet.create({
     }, account: {
         position: 'absolute',
     },
-    accountText: {
-        color:'white',
-        top:110,
-        left:20,
-        fontSize:17,
+    displayBlock: {
+        display: 'flex'
     },
-    accountNumber:{
-        fontWeight:'700'
+    displayNone: {
+        display: 'none'
+    },
+    accountText: {
+        color: 'white',
+        top: 110,
+        left: 20,
+        fontSize: 17,
+    },
+    accountNumber: {
+        fontWeight: '700'
     },
     buttonText: {
         color: 'white',

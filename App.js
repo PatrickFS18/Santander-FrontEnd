@@ -4,8 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import SplashScreen from './templates/screen/splashScreen/index';
 import Login from './templates/screen/login/index';
-import Home from './templates/screen/home/index';
-
+import Home from './templates/screen/home';
 const Stack = createStackNavigator();
 
 export default function App() {
